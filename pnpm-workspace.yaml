@@ -3,4 +3,4 @@
 # Think of it like Figma's "Publish to library" - these packages can reference each other
 
 packages:
-  - "packages/*"
+  - 'packages/*'

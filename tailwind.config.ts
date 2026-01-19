@@ -1,8 +1,8 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 /**
  * Tailwind CSS v4 Configuration
- * 
+ *
  * 📚 LEARNING MOMENT:
  * Tailwind v4 is different from v3 — it uses CSS-first configuration.
  * Most of our design tokens are defined in theme.css using @theme directive.
@@ -14,17 +14,17 @@ const config: Config = {
   // Like telling Figma which pages to include when publishing
   // ========================================
   content: [
-    "./packages/ui/src/**/*.{ts,tsx}",
-    "./packages/specialized/src/**/*.{ts,tsx}",
-    "./packages/docs/.storybook/**/*.{ts,tsx}",
-    "./packages/docs/stories/**/*.{ts,tsx}",
+    './packages/ui/src/**/*.{ts,tsx}',
+    './packages/specialized/src/**/*.{ts,tsx}',
+    './packages/docs/.storybook/**/*.{ts,tsx}',
+    './packages/docs/stories/**/*.{ts,tsx}',
   ],
 
   // ========================================
   // DARK MODE - Using class strategy
   // Allows toggling dark mode with a .dark class on <html>
   // ========================================
-  darkMode: "class",
+  darkMode: 'class',
 
   // ========================================
   // THEME - Extending Tailwind's defaults
@@ -34,8 +34,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "monospace"],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
     },
   },

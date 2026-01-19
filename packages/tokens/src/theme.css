@@ -19,8 +19,8 @@
    ======================================== */
 @theme {
   /* Font Families */
-  --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 /* ========================================
@@ -31,27 +31,27 @@
      COLORS - Primary (Default Buttons)
      Figma: base/primary-*
      ---------------------------------------- */
-  --color-primary-default: #2563eb;      /* Blue 600 - Primary background */
-  --color-primary-hover: #1d4ed8;        /* Blue 700 - Hover state */
-  --color-primary-active: #1e40af;       /* Blue 800 - Pressed state */
-  --color-primary-foreground: #f8fafc;   /* Slate 50 - Text on primary */
+  --color-primary-default: #2563eb; /* Blue 600 - Primary background */
+  --color-primary-hover: #1d4ed8; /* Blue 700 - Hover state */
+  --color-primary-active: #1e40af; /* Blue 800 - Pressed state */
+  --color-primary-foreground: #f8fafc; /* Slate 50 - Text on primary */
 
   /* ----------------------------------------
      COLORS - Secondary
      Figma: base/secondary-*
      ---------------------------------------- */
-  --color-secondary-default: #f1f5f9;    /* Slate 100 - Secondary background */
-  --color-secondary-hover: #e2e8f0;      /* Slate 200 - Hover state */
-  --color-secondary-active: #cbd5e1;     /* Slate 300 - Pressed state */
+  --color-secondary-default: #f1f5f9; /* Slate 100 - Secondary background */
+  --color-secondary-hover: #e2e8f0; /* Slate 200 - Hover state */
+  --color-secondary-active: #cbd5e1; /* Slate 300 - Pressed state */
   --color-secondary-foreground: #0f172a; /* Slate 900 - Text on secondary */
 
   /* ----------------------------------------
      COLORS - Destructive (Danger/Delete)
      Figma: base/destructive-*
      ---------------------------------------- */
-  --color-destructive-default: #dc2626;  /* Red 600 - Destructive background */
-  --color-destructive-hover: #b91c1c;    /* Red 700 - Hover state */
-  --color-destructive-active: #991b1b;   /* Red 800 - Pressed state */
+  --color-destructive-default: #dc2626; /* Red 600 - Destructive background */
+  --color-destructive-hover: #b91c1c; /* Red 700 - Hover state */
+  --color-destructive-active: #991b1b; /* Red 800 - Pressed state */
   --color-destructive-foreground: #fef2f2; /* Red 50 - Text on destructive */
 
   /* ----------------------------------------
@@ -59,37 +59,37 @@
      Figma: base/outline-*
      ---------------------------------------- */
   --color-outline-default: transparent;
-  --color-outline-hover: #f8fafc;        /* Slate 50 */
-  --color-outline-active: #f1f5f9;       /* Slate 100 */
-  --color-outline-border: #cbd5e1;       /* Slate 300 - Border color */
+  --color-outline-hover: #f8fafc; /* Slate 50 */
+  --color-outline-active: #f1f5f9; /* Slate 100 */
+  --color-outline-border: #cbd5e1; /* Slate 300 - Border color */
 
   /* ----------------------------------------
      COLORS - Ghost Variant
      Figma: base/ghost-*
      ---------------------------------------- */
   --color-ghost-default: transparent;
-  --color-ghost-hover: #f1f5f9;          /* Slate 100 */
-  --color-ghost-active: #e2e8f0;         /* Slate 200 */
+  --color-ghost-hover: #f1f5f9; /* Slate 100 */
+  --color-ghost-active: #e2e8f0; /* Slate 200 */
 
   /* ----------------------------------------
      COLORS - Surface (Backgrounds)
      ---------------------------------------- */
-  --color-background: #ffffff;           /* Page background */
-  --color-foreground: #020617;           /* Default text - Slate 950 */
-  --color-accent-foreground: #0f172a;    /* Slate 900 - Accent text */
+  --color-background: #ffffff; /* Page background */
+  --color-foreground: #020617; /* Default text - Slate 950 */
+  --color-accent-foreground: #0f172a; /* Slate 900 - Accent text */
 
   /* ----------------------------------------
      COLORS - Border & Input
      ---------------------------------------- */
-  --color-border: #cbd5e1;               /* Slate 300 - Default border */
-  --color-input: #cbd5e1;                /* Slate 300 - Input border */
-  --color-ring: #3b82f6;                 /* Blue 500 - Focus ring */
+  --color-border: #cbd5e1; /* Slate 300 - Default border */
+  --color-input: #cbd5e1; /* Slate 300 - Input border */
+  --color-ring: #3b82f6; /* Blue 500 - Focus ring */
 
   /* ----------------------------------------
      COLORS - Muted (Subdued elements)
      ---------------------------------------- */
-  --color-muted: #f1f5f9;                /* Slate 100 - Muted background */
-  --color-muted-foreground: #64748b;     /* Slate 500 - Muted text */
+  --color-muted: #f1f5f9; /* Slate 100 - Muted background */
+  --color-muted-foreground: #64748b; /* Slate 500 - Muted text */
 
   /* ----------------------------------------
      SPACING SCALE
@@ -119,11 +119,11 @@
      Figma: height/*
      Used for buttons, inputs, etc.
      ---------------------------------------- */
-  --height-6: 24px;   /* Small - Dense/compact UI */
-  --height-7: 28px;   /* TreeView rows */
-  --height-8: 32px;   /* Medium - Default */
-  --height-9: 36px;   /* Intermediate */
-  --height-10: 40px;  /* Large - Touch targets */
+  --height-6: 24px; /* Small - Dense/compact UI */
+  --height-7: 28px; /* TreeView rows */
+  --height-8: 32px; /* Medium - Default */
+  --height-9: 36px; /* Intermediate */
+  --height-10: 40px; /* Large - Touch targets */
 
   /* ----------------------------------------
      BORDER RADIUS
@@ -176,7 +176,7 @@
      FOCUS RINGS
      Used for accessibility - keyboard focus
      ---------------------------------------- */
-  --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5);           /* Blue focus */
+  --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Blue focus */
   --focus-ring-destructive: 0 0 0 3px rgba(239, 68, 68, 0.2); /* Red focus */
 
   /* ----------------------------------------
@@ -199,45 +199,45 @@
    ======================================== */
 .dark {
   /* Primary - slightly lighter in dark mode */
-  --color-primary-default: #3b82f6;      /* Blue 500 */
-  --color-primary-hover: #60a5fa;        /* Blue 400 */
-  --color-primary-active: #2563eb;       /* Blue 600 */
-  --color-primary-foreground: #f8fafc;   /* Slate 50 */
+  --color-primary-default: #3b82f6; /* Blue 500 */
+  --color-primary-hover: #60a5fa; /* Blue 400 */
+  --color-primary-active: #2563eb; /* Blue 600 */
+  --color-primary-foreground: #f8fafc; /* Slate 50 */
 
   /* Secondary */
-  --color-secondary-default: #334155;    /* Slate 700 */
-  --color-secondary-hover: #475569;      /* Slate 600 */
-  --color-secondary-active: #64748b;     /* Slate 500 */
+  --color-secondary-default: #334155; /* Slate 700 */
+  --color-secondary-hover: #475569; /* Slate 600 */
+  --color-secondary-active: #64748b; /* Slate 500 */
   --color-secondary-foreground: #f8fafc; /* Slate 50 */
 
   /* Destructive */
-  --color-destructive-default: #ef4444;  /* Red 500 */
-  --color-destructive-hover: #f87171;    /* Red 400 */
-  --color-destructive-active: #dc2626;   /* Red 600 */
+  --color-destructive-default: #ef4444; /* Red 500 */
+  --color-destructive-hover: #f87171; /* Red 400 */
+  --color-destructive-active: #dc2626; /* Red 600 */
   --color-destructive-foreground: #fef2f2;
 
   /* Outline */
-  --color-outline-hover: #1e293b;        /* Slate 800 */
-  --color-outline-active: #334155;       /* Slate 700 */
-  --color-outline-border: #475569;       /* Slate 600 */
+  --color-outline-hover: #1e293b; /* Slate 800 */
+  --color-outline-active: #334155; /* Slate 700 */
+  --color-outline-border: #475569; /* Slate 600 */
 
   /* Ghost */
-  --color-ghost-hover: #1e293b;          /* Slate 800 */
-  --color-ghost-active: #334155;         /* Slate 700 */
+  --color-ghost-hover: #1e293b; /* Slate 800 */
+  --color-ghost-active: #334155; /* Slate 700 */
 
   /* Surface */
-  --color-background: #020617;           /* Slate 950 */
-  --color-foreground: #f8fafc;           /* Slate 50 */
+  --color-background: #020617; /* Slate 950 */
+  --color-foreground: #f8fafc; /* Slate 50 */
   --color-accent-foreground: #f8fafc;
 
   /* Border & Input */
   --color-border: rgba(255, 255, 255, 0.2);
-  --color-input: #64748b;                /* Slate 500 */
-  --color-ring: #60a5fa;                 /* Blue 400 */
+  --color-input: #64748b; /* Slate 500 */
+  --color-ring: #60a5fa; /* Blue 400 */
 
   /* Muted */
-  --color-muted: #1e293b;                /* Slate 800 */
-  --color-muted-foreground: #94a3b8;     /* Slate 400 */
+  --color-muted: #1e293b; /* Slate 800 */
+  --color-muted-foreground: #94a3b8; /* Slate 400 */
 
   /* Focus - brighter in dark mode */
   --focus-ring: 0 0 0 3px rgba(96, 165, 250, 0.5);

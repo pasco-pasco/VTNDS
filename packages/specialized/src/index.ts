@@ -1,10 +1,10 @@
 /**
  * @vtnds/specialized
- * 
+ *
  * Specialized components built with React Aria.
  * These are more complex components that require advanced
  * accessibility and interaction patterns.
- * 
+ *
  * Planned components:
  * - TreeView (for file browsers, layer panels)
  * - ComboBox (searchable dropdown)
@@ -16,4 +16,4 @@
 // export { TreeView } from "./TreeView";
 
 // Placeholder export to make TypeScript happy
-export const specializdVersion = "0.0.1";
+export const specializdVersion = '0.0.1';

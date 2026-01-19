@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 import {
   IconPlus,
   IconChevronRight,
@@ -8,12 +8,12 @@ import {
   IconSearch,
   IconMail,
   IconHeart,
-} from "@tabler/icons-react";
-import { Button } from "./Button";
+} from '@tabler/icons-react';
+import { Button } from './Button';
 
 /**
  * Button Stories for Storybook
- * 
+ *
  * 📚 LEARNING MOMENT:
  * Storybook stories are like your Figma component examples.
  * Each "story" shows the component in a specific state.
@@ -26,44 +26,44 @@ import { Button } from "./Button";
  */
 const meta: Meta<typeof Button> = {
   // Title in sidebar: Components → Button
-  title: "Components/Button",
-  
+  title: 'Components/Button',
+
   // The component we're documenting
   component: Button,
-  
+
   // Default props applied to all stories
   args: {
-    children: "Button",
+    children: 'Button',
   },
-  
+
   // Controls panel configuration
   argTypes: {
     variant: {
-      control: "select",
-      options: ["default", "secondary", "destructive", "outline", "ghost", "link"],
-      description: "Visual style variant",
+      control: 'select',
+      options: ['default', 'secondary', 'destructive', 'outline', 'ghost', 'link'],
+      description: 'Visual style variant',
     },
     size: {
-      control: "select",
-      options: ["sm", "md", "lg", "icon-sm", "icon-md", "icon-lg"],
-      description: "Size preset",
+      control: 'select',
+      options: ['sm', 'md', 'lg', 'icon-sm', 'icon-md', 'icon-lg'],
+      description: 'Size preset',
     },
     disabled: {
-      control: "boolean",
-      description: "Disables interaction",
+      control: 'boolean',
+      description: 'Disables interaction',
     },
     loading: {
-      control: "boolean",
-      description: "Shows loading spinner",
+      control: 'boolean',
+      description: 'Shows loading spinner',
     },
     fullWidth: {
-      control: "boolean",
-      description: "Expands to fill container",
+      control: 'boolean',
+      description: 'Expands to fill container',
     },
   },
-  
+
   // Tags for filtering in Storybook
-  tags: ["autodocs"],
+  tags: ['autodocs'],
 };
 
 export default meta;
@@ -79,8 +79,8 @@ type Story = StoryObj<typeof meta>;
  */
 export const Default: Story = {
   args: {
-    variant: "default",
-    children: "Primary Action",
+    variant: 'default',
+    children: 'Primary Action',
   },
 };
 
@@ -90,8 +90,8 @@ export const Default: Story = {
  */
 export const Secondary: Story = {
   args: {
-    variant: "secondary",
-    children: "Secondary Action",
+    variant: 'secondary',
+    children: 'Secondary Action',
   },
 };
 
@@ -101,8 +101,8 @@ export const Secondary: Story = {
  */
 export const Destructive: Story = {
   args: {
-    variant: "destructive",
-    children: "Delete Item",
+    variant: 'destructive',
+    children: 'Delete Item',
   },
 };
 
@@ -112,8 +112,8 @@ export const Destructive: Story = {
  */
 export const Outline: Story = {
   args: {
-    variant: "outline",
-    children: "Outline Action",
+    variant: 'outline',
+    children: 'Outline Action',
   },
 };
 
@@ -123,8 +123,8 @@ export const Outline: Story = {
  */
 export const Ghost: Story = {
   args: {
-    variant: "ghost",
-    children: "Ghost Action",
+    variant: 'ghost',
+    children: 'Ghost Action',
   },
 };
 
@@ -134,8 +134,8 @@ export const Ghost: Story = {
  */
 export const Link: Story = {
   args: {
-    variant: "link",
-    children: "Link Action",
+    variant: 'link',
+    children: 'Link Action',
   },
 };
 
@@ -149,8 +149,8 @@ export const Link: Story = {
  */
 export const SizeSmall: Story = {
   args: {
-    size: "sm",
-    children: "Small (24px)",
+    size: 'sm',
+    children: 'Small (24px)',
   },
 };
 
@@ -160,8 +160,8 @@ export const SizeSmall: Story = {
  */
 export const SizeMedium: Story = {
   args: {
-    size: "md",
-    children: "Medium (32px)",
+    size: 'md',
+    children: 'Medium (32px)',
   },
 };
 
@@ -171,8 +171,8 @@ export const SizeMedium: Story = {
  */
 export const SizeLarge: Story = {
   args: {
-    size: "lg",
-    children: "Large (40px)",
+    size: 'lg',
+    children: 'Large (40px)',
   },
 };
 
@@ -187,7 +187,7 @@ export const SizeLarge: Story = {
 export const WithLeftIcon: Story = {
   args: {
     leftIcon: <IconPlus size={16} stroke={1.5} />,
-    children: "Add Item",
+    children: 'Add Item',
   },
 };
 
@@ -198,7 +198,7 @@ export const WithLeftIcon: Story = {
 export const WithRightIcon: Story = {
   args: {
     rightIcon: <IconChevronRight size={16} stroke={1.5} />,
-    children: "Continue",
+    children: 'Continue',
   },
 };
 
@@ -210,7 +210,7 @@ export const WithBothIcons: Story = {
   args: {
     leftIcon: <IconDownload size={16} stroke={1.5} />,
     rightIcon: <IconChevronRight size={16} stroke={1.5} />,
-    children: "Download",
+    children: 'Download',
   },
 };
 
@@ -225,8 +225,8 @@ export const WithBothIcons: Story = {
  */
 export const IconOnlySmall: Story = {
   args: {
-    size: "icon-sm",
-    "aria-label": "Settings",
+    size: 'icon-sm',
+    'aria-label': 'Settings',
     children: <IconSettings size={16} stroke={1.5} />,
   },
 };
@@ -237,8 +237,8 @@ export const IconOnlySmall: Story = {
  */
 export const IconOnlyMedium: Story = {
   args: {
-    size: "icon-md",
-    "aria-label": "Search",
+    size: 'icon-md',
+    'aria-label': 'Search',
     children: <IconSearch size={16} stroke={1.5} />,
   },
 };
@@ -249,8 +249,8 @@ export const IconOnlyMedium: Story = {
  */
 export const IconOnlyLarge: Story = {
   args: {
-    size: "icon-lg",
-    "aria-label": "Send email",
+    size: 'icon-lg',
+    'aria-label': 'Send email',
     children: <IconMail size={20} stroke={1.5} />,
   },
 };
@@ -266,7 +266,7 @@ export const IconOnlyLarge: Story = {
 export const Disabled: Story = {
   args: {
     disabled: true,
-    children: "Disabled",
+    children: 'Disabled',
   },
 };
 
@@ -277,7 +277,7 @@ export const Disabled: Story = {
 export const Loading: Story = {
   args: {
     loading: true,
-    children: "Saving...",
+    children: 'Saving...',
   },
 };
 
@@ -288,7 +288,7 @@ export const Loading: Story = {
 export const FullWidth: Story = {
   args: {
     fullWidth: true,
-    children: "Full Width Button",
+    children: 'Full Width Button',
   },
 };
 
@@ -383,14 +383,22 @@ export const StatesMatrix: Story = {
       <div className="flex items-center gap-4">
         <span className="w-20 text-sm text-gray-500">Disabled</span>
         <Button disabled>Disabled</Button>
-        <Button variant="secondary" disabled>Disabled</Button>
-        <Button variant="outline" disabled>Disabled</Button>
+        <Button variant="secondary" disabled>
+          Disabled
+        </Button>
+        <Button variant="outline" disabled>
+          Disabled
+        </Button>
       </div>
       <div className="flex items-center gap-4">
         <span className="w-20 text-sm text-gray-500">Loading</span>
         <Button loading>Loading</Button>
-        <Button variant="secondary" loading>Loading</Button>
-        <Button variant="outline" loading>Loading</Button>
+        <Button variant="secondary" loading>
+          Loading
+        </Button>
+        <Button variant="outline" loading>
+          Loading
+        </Button>
       </div>
     </div>
   ),

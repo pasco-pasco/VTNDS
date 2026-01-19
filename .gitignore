@@ -1,0 +1,55 @@
+# ========================================
+# Dependencies - These get reinstalled from package.json
+# ========================================
+node_modules/
+.pnpm-store/
+
+# ========================================
+# Build outputs - Generated from source code
+# ========================================
+dist/
+build/
+*.tsbuildinfo
+
+# ========================================
+# Storybook build output
+# ========================================
+storybook-static/
+
+# ========================================
+# Environment files - May contain secrets
+# ========================================
+.env
+.env.local
+.env.*.local
+
+# ========================================
+# Editor and OS files
+# ========================================
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-*
+
+# ========================================
+# Logs and debug files
+# ========================================
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ========================================
+# Testing
+# ========================================
+coverage/
+.nyc_output/
+
+# ========================================
+# Misc
+# ========================================
+*.local
+.cache/

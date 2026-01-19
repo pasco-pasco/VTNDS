@@ -1,0 +1,56 @@
+{
+  "compilerOptions": {
+    // ========================================
+    // STRICT MODE - Catches errors early
+    // Like Figma's "Require property" - forces you to be explicit
+    // ========================================
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    // ========================================
+    // MODULE SETTINGS - How imports work
+    // ========================================
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    // ========================================
+    // JSX - For React components
+    // ========================================
+    "jsx": "react-jsx",
+
+    // ========================================
+    // PATH ALIASES - Shortcuts for imports
+    // Instead of: import { Button } from "../../packages/ui/src/Button"
+    // You write:  import { Button } from "@vtnds/ui"
+    // ========================================
+    "baseUrl": ".",
+    "paths": {
+      "@vtnds/ui": ["packages/ui/src/index.ts"],
+      "@vtnds/ui/*": ["packages/ui/src/*"],
+      "@vtnds/tokens": ["packages/tokens/src/index.ts"],
+      "@vtnds/tokens/*": ["packages/tokens/src/*"],
+      "@vtnds/specialized": ["packages/specialized/src/index.ts"],
+      "@vtnds/specialized/*": ["packages/specialized/src/*"]
+    },
+
+    // ========================================
+    // OUTPUT SETTINGS
+    // ========================================
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "skipLibCheck": true
+  },
+  "include": ["packages/*/src/**/*"],
+  "exclude": ["node_modules", "dist", "build"]
+}

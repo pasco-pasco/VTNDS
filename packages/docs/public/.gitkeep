@@ -1,0 +1,6 @@
+# Public Assets
+
+Place static assets (images, fonts, etc.) here.
+They'll be available at the root URL in Storybook.
+
+Example: `/logo.svg` would be accessible as `/logo.svg` in stories.

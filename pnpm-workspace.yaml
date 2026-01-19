@@ -1,0 +1,6 @@
+# pnpm Workspace Configuration
+# This tells pnpm that folders inside "packages/" are separate but linked packages
+# Think of it like Figma's "Publish to library" - these packages can reference each other
+
+packages:
+  - "packages/*"

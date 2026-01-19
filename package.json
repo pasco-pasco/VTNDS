@@ -1,0 +1,30 @@
+{
+  "name": "vtnds",
+  "version": "0.0.1",
+  "description": "VTNDS - Vention Design System for CAD and industrial automation software",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --filter @vtnds/docs dev",
+    "build": "pnpm -r build",
+    "build:tokens": "pnpm --filter @vtnds/tokens build",
+    "storybook": "pnpm --filter @vtnds/docs storybook",
+    "lint": "eslint . --ext .ts,.tsx",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "components",
+    "cad",
+    "industrial",
+    "vention"
+  ],
+  "author": "Vention",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.15.0"
+}

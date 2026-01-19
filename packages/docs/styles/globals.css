@@ -1,0 +1,69 @@
+/**
+ * Global Styles for Storybook
+ * 
+ * This file sets up:
+ * 1. Tailwind CSS (v4)
+ * 2. Base typography and resets
+ * 3. Font imports
+ */
+
+/* ========================================
+   TAILWIND CSS v4 IMPORTS
+   ======================================== */
+@import "tailwindcss";
+
+/* ========================================
+   FONT IMPORTS
+   Using Google Fonts for Inter and JetBrains Mono
+   ======================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   BASE STYLES
+   Applied to all elements
+   ======================================== */
+@layer base {
+  /* Apply box-sizing to all elements */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  /* Reset margins and set base font */
+  html {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Apply theme colors to body */
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  /* Code and pre elements use monospace font */
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: var(--font-mono), monospace;
+  }
+}
+
+/* ========================================
+   STORYBOOK-SPECIFIC STYLES
+   ======================================== */
+
+/* Ensure Storybook canvas respects our theme */
+.sb-show-main {
+  background-color: var(--color-background) !important;
+}
+
+/* Dark mode styles for Storybook canvas */
+.dark .sb-show-main {
+  background-color: var(--color-background) !important;
+}

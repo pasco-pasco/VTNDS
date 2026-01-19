@@ -1,0 +1,24 @@
+{
+  "name": "@vtnds/tokens",
+  "version": "0.0.1",
+  "description": "Design tokens for VTNDS - exported from Figma",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./theme.css": "./src/theme.css"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "build": "echo 'Tokens are CSS-only, no build needed'"
+  },
+  "keywords": [
+    "design-tokens",
+    "css-variables",
+    "vtnds"
+  ],
+  "license": "MIT"
+}

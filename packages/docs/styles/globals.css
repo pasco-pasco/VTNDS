@@ -1,6 +1,6 @@
 /**
  * Global Styles for Storybook
- * 
+ *
  * This file sets up:
  * 1. Tailwind CSS (v4)
  * 2. Base typography and resets
@@ -11,6 +11,11 @@
    TAILWIND CSS v4 IMPORTS
    ======================================== */
 @import 'tailwindcss';
+
+/* Tell Tailwind where to scan for classes */
+@source '../../ui/src/**/*.{ts,tsx}';
+@source '../../specialized/src/**/*.{ts,tsx}';
+@source '../stories/**/*.{ts,tsx}';
 
 /* ========================================
    FONT IMPORTS

@@ -11,9 +11,9 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@vtnds/specialized": "workspace:*",
     "@vtnds/tokens": "workspace:*",
     "@vtnds/ui": "workspace:*",
-    "@vtnds/specialized": "workspace:*",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
@@ -27,6 +27,7 @@
     "@storybook/react": "^8.4.0",
     "@storybook/react-vite": "^8.4.0",
     "@storybook/test": "^8.4.0",
+    "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.20",

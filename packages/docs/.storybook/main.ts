@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import tailwindcss from '@tailwindcss/vite';
 
 /**
  * Storybook Configuration
@@ -59,6 +60,15 @@ const config: StorybookConfig = {
   // STATIC FILES - Assets directory
   // ========================================
   staticDirs: ['../public'],
+
+  // ========================================
+  // VITE CONFIG - Add Tailwind CSS v4 plugin
+  // ========================================
+  viteFinal: async (config) => {
+    config.plugins = config.plugins || [];
+    config.plugins.push(tailwindcss());
+    return config;
+  },
 };
 
 export default config;

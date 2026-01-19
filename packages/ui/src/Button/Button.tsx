@@ -26,11 +26,11 @@ const buttonVariants = cva(
     // Typography
     'font-medium',
     // Transitions (smooth hover/focus effects)
-    'transition-colors duration-[--duration-fast]',
+    'transition-colors duration-150',
     // Focus ring for accessibility (keyboard users)
-    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--color-ring] focus-visible:ring-offset-2',
+    'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-ring)] focus-visible:ring-offset-2',
     // Disabled state (50% opacity, not clickable)
-    'disabled:pointer-events-none disabled:opacity-[--opacity-disabled]',
+    'disabled:pointer-events-none disabled:opacity-50',
     // Remove default button styles
     'border-0 cursor-pointer',
   ],
@@ -47,55 +47,56 @@ const buttonVariants = cva(
       variant: {
         /* DEFAULT (Primary) - Blue background, white text */
         default: [
-          'bg-[--color-primary-default]',
-          'text-[--color-primary-foreground]',
+          'bg-[var(--color-primary-default)]',
+          'text-[var(--color-primary-foreground)]',
           // Hover: slightly darker
-          'hover:bg-[--color-primary-hover]',
+          'hover:bg-[var(--color-primary-hover)]',
           // Active/Pressed: even darker
-          'active:bg-[--color-primary-active]',
+          'active:bg-[var(--color-primary-active)]',
         ],
 
         /* SECONDARY - Gray background, dark text */
         secondary: [
-          'bg-[--color-secondary-default]',
-          'text-[--color-secondary-foreground]',
-          'hover:bg-[--color-secondary-hover]',
-          'active:bg-[--color-secondary-active]',
+          'bg-[var(--color-secondary-default)]',
+          'text-[var(--color-secondary-foreground)]',
+          'hover:bg-[var(--color-secondary-hover)]',
+          'active:bg-[var(--color-secondary-active)]',
         ],
 
         /* DESTRUCTIVE - Red background, white text */
         destructive: [
-          'bg-[--color-destructive-default]',
-          'text-[--color-destructive-foreground]',
-          'hover:bg-[--color-destructive-hover]',
-          'active:bg-[--color-destructive-active]',
+          'bg-[var(--color-destructive-default)]',
+          'text-[var(--color-destructive-foreground)]',
+          'hover:bg-[var(--color-destructive-hover)]',
+          'active:bg-[var(--color-destructive-active)]',
           // Destructive buttons use red focus ring
           'focus-visible:ring-red-500/20',
         ],
 
         /* OUTLINE - Transparent with border */
         outline: [
-          'bg-[--color-outline-default]',
-          'text-[--color-foreground]',
-          'border border-[--color-outline-border]',
-          'hover:bg-[--color-outline-hover]',
-          'active:bg-[--color-outline-active]',
+          'bg-[var(--color-outline-default)]',
+          'text-[var(--color-foreground)]',
+          'border border-[var(--color-outline-border)]',
+          'hover:bg-[var(--color-outline-hover)]',
+          'active:bg-[var(--color-outline-active)]',
         ],
 
         /* GHOST - Transparent, no border */
         ghost: [
-          'bg-[--color-ghost-default]',
-          'text-[--color-accent-foreground]',
-          'hover:bg-[--color-ghost-hover]',
-          'active:bg-[--color-ghost-active]',
+          'bg-[var(--color-ghost-default)]',
+          'text-[var(--color-foreground)]',
+          'hover:bg-[var(--color-ghost-hover)]',
+          'active:bg-[var(--color-ghost-active)]',
         ],
 
         /* LINK - Text only with underline on hover */
         link: [
           'bg-transparent',
-          'text-[--color-foreground]',
+          'text-[var(--color-primary-default)]',
           'underline-offset-4',
           'hover:underline',
+          'hover:text-[var(--color-primary-hover)]',
           // Links don't need as much padding
           'p-0 h-auto',
         ],
@@ -109,46 +110,46 @@ const buttonVariants = cva(
       size: {
         /* SMALL - 24px height, compact UI */
         sm: [
-          'h-[--height-6]', // 24px height
-          'px-[--spacing-2]', // 8px horizontal padding
-          'text-[length:--text-xs]', // 12px font
-          'rounded-[--radius-default]',
-          'gap-[--spacing-1]', // 4px gap between icon and text
+          'h-6', // 24px height
+          'px-2', // 8px horizontal padding
+          'text-xs', // 12px font
+          'rounded-[var(--radius-default)]',
+          'gap-1', // 4px gap between icon and text
         ],
 
         /* MEDIUM - 32px height, default */
         md: [
-          'h-[--height-8]', // 32px height
-          'px-[--spacing-2-5]', // 10px horizontal padding
-          'text-[length:--text-sm]', // 14px font
-          'rounded-[--radius-default]',
-          'gap-[--spacing-1-5]', // 6px gap
+          'h-8', // 32px height
+          'px-2.5', // 10px horizontal padding
+          'text-sm', // 14px font
+          'rounded-[var(--radius-default)]',
+          'gap-1.5', // 6px gap
         ],
 
         /* LARGE - 40px height, touch targets */
         lg: [
-          'h-[--height-10]', // 40px height
-          'px-[--spacing-3]', // 12px horizontal padding
-          'text-[length:--text-sm]', // 14px font (same as md)
-          'rounded-[--radius-default]',
-          'gap-[--spacing-2]', // 8px gap
+          'h-10', // 40px height
+          'px-3', // 12px horizontal padding
+          'text-sm', // 14px font (same as md)
+          'rounded-[var(--radius-default)]',
+          'gap-2', // 8px gap
         ],
 
         /* ICON-ONLY SIZES - Square buttons for icons */
         'icon-sm': [
-          'h-[--height-6] w-[--height-6]', // 24×24px
+          'h-6 w-6', // 24×24px
           'p-0',
-          'rounded-[--radius-default]',
+          'rounded-[var(--radius-default)]',
         ],
         'icon-md': [
-          'h-[--height-8] w-[--height-8]', // 32×32px
+          'h-8 w-8', // 32×32px
           'p-0',
-          'rounded-[--radius-default]',
+          'rounded-[var(--radius-default)]',
         ],
         'icon-lg': [
-          'h-[--height-10] w-[--height-10]', // 40×40px
+          'h-10 w-10', // 40×40px
           'p-0',
-          'rounded-[--radius-default]',
+          'rounded-[var(--radius-default)]',
         ],
       },
 

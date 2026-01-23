@@ -19,9 +19,11 @@
 export { Button, buttonVariants } from './Button';
 export type { ButtonProps, ButtonVariant, ButtonSize } from './Button';
 
+export { Checkbox, checkboxVariants } from './Checkbox';
+export type { CheckboxProps } from './Checkbox';
+
 // Future components will be exported here:
 // export { Input } from "./Input";
-// export { Checkbox } from "./Checkbox";
 // export { Switch } from "./Switch";
 // export { Select } from "./Select";
 

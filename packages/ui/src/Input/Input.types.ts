@@ -7,7 +7,9 @@ import type { InputHTMLAttributes } from 'react';
  */
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   /**
-   * Visual variant of the input
+   * Visual variant of the input.
+   * Note: When `type="file"`, the variant is automatically set to `'file'`
+   * regardless of the value passed here.
    * @default 'default'
    */
   variant?: 'default' | 'file';

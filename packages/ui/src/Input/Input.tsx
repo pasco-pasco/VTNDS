@@ -93,9 +93,14 @@ const labelVariants = cva(['block', 'font-medium', 'text-[var(--color-foreground
       md: ['text-sm'],
       lg: ['text-sm'],
     },
+    disabled: {
+      true: ['opacity-50', 'cursor-not-allowed'],
+      false: [],
+    },
   },
   defaultVariants: {
     size: 'md',
+    disabled: false,
   },
 });
 
@@ -113,10 +118,15 @@ const helperTextVariants = cva(['mt-1.5'], {
       true: ['text-[var(--color-destructive-default)]'],
       false: ['text-[var(--color-muted-foreground)]'],
     },
+    disabled: {
+      true: ['opacity-50'],
+      false: [],
+    },
   },
   defaultVariants: {
     size: 'md',
     error: false,
+    disabled: false,
   },
 });
 
@@ -177,10 +187,9 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     // Generate unique ID using React's useId hook
     const generatedId = useId();
     const inputId = id || `input-${generatedId}`;
-    const helperTextId = helperText || errorMessage ? `${inputId}-helper` : undefined;
-
     // Determine the text to show below the input
     const bottomText = error && errorMessage ? errorMessage : helperText;
+    const helperTextId = bottomText ? `${inputId}-helper` : undefined;
 
     // Auto-detect file variant from type
     const effectiveVariant = type === 'file' ? 'file' : variant;
@@ -189,7 +198,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       <div className={cn('flex flex-col', wrapperClassName)}>
         {/* Label */}
         {label && (
-          <label htmlFor={inputId} className={labelVariants({ size })}>
+          <label htmlFor={inputId} className={labelVariants({ size, disabled })}>
             {label}
           </label>
         )}
@@ -201,14 +210,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           type={type}
           disabled={disabled}
           aria-describedby={helperTextId}
-          aria-invalid={error}
+          aria-invalid={error || undefined}
           className={cn(inputVariants({ size, variant: effectiveVariant, error }), className)}
           {...props}
         />
 
         {/* Helper/Error text */}
         {bottomText && (
-          <span id={helperTextId} className={helperTextVariants({ size, error })}>
+          <span id={helperTextId} className={helperTextVariants({ size, error, disabled })}>
             {bottomText}
           </span>
         )}

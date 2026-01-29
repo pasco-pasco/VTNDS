@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { Input } from './Input';
@@ -79,6 +80,11 @@ describe('Input', () => {
   it('sets aria-invalid when error is true', () => {
     render(<Input error />);
     expect(screen.getByRole('textbox')).toHaveAttribute('aria-invalid', 'true');
+  });
+
+  it('omits aria-invalid when error is false', () => {
+    render(<Input />);
+    expect(screen.getByRole('textbox')).not.toHaveAttribute('aria-invalid');
   });
 
   it('shows error message when error is true', () => {
@@ -211,5 +217,68 @@ describe('Input', () => {
     render(<Input type="file" />);
     const input = document.querySelector('input[type="file"]');
     expect(input).toHaveClass('file:border-0');
+  });
+
+  it('overrides explicit variant when type is file', () => {
+    render(<Input type="file" variant="default" />);
+    const input = document.querySelector('input[type="file"]');
+    expect(input).toHaveClass('file:border-0');
+  });
+
+  // ========================================
+  // ARIA-DESCRIBEDBY EDGE CASES
+  // ========================================
+
+  it('sets aria-describedby when error is true and errorMessage is present', () => {
+    render(<Input error errorMessage="Invalid" />);
+    const input = screen.getByRole('textbox');
+    const errorText = screen.getByText('Invalid');
+    expect(input).toHaveAttribute('aria-describedby', errorText.id);
+  });
+
+  it('does not set aria-describedby when no helperText or errorMessage', () => {
+    render(<Input />);
+    const input = screen.getByRole('textbox');
+    expect(input).not.toHaveAttribute('aria-describedby');
+  });
+
+  it('does not set aria-describedby when errorMessage is provided but error is false', () => {
+    render(<Input errorMessage="Invalid" />);
+    const input = screen.getByRole('textbox');
+    expect(input).not.toHaveAttribute('aria-describedby');
+  });
+
+  it('shows error styling but no error text when error is true without errorMessage', () => {
+    render(<Input error />);
+    const input = screen.getByRole('textbox');
+    expect(input).toHaveClass('border-[var(--color-destructive-default)]');
+    expect(input).not.toHaveAttribute('aria-describedby');
+  });
+
+  // ========================================
+  // DISABLED STYLING
+  // ========================================
+
+  it('dims the label when disabled', () => {
+    render(<Input label="Email" disabled />);
+    const label = screen.getByText('Email');
+    expect(label).toHaveClass('opacity-50');
+    expect(label).toHaveClass('cursor-not-allowed');
+  });
+
+  it('dims the helper text when disabled', () => {
+    render(<Input helperText="Required" disabled />);
+    const helperText = screen.getByText('Required');
+    expect(helperText).toHaveClass('opacity-50');
+  });
+
+  // ========================================
+  // REF FORWARDING
+  // ========================================
+
+  it('forwards ref to the input element', () => {
+    const ref = React.createRef<HTMLInputElement>();
+    render(<Input ref={ref} />);
+    expect(ref.current).toBeInstanceOf(HTMLInputElement);
   });
 });

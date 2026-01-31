@@ -105,12 +105,12 @@ const buttonVariants = cva(
       /**
        * Size variant
        * Controls height, padding, font size, and border radius
-       * Heights: sm=24px, md=32px, lg=40px (matching Figma specs)
+       * Heights: sm=28px, md=32px, lg=40px (matching Figma specs)
        */
       size: {
-        /* SMALL - 24px height, compact UI */
+        /* SMALL - 28px height, compact UI */
         sm: [
-          'h-6', // 24px height
+          'h-7', // 28px height
           'px-2', // 8px horizontal padding
           'text-xs', // 12px font
           'rounded-[var(--radius-default)]',
@@ -137,7 +137,7 @@ const buttonVariants = cva(
 
         /* ICON-ONLY SIZES - Square buttons for icons */
         'icon-sm': [
-          'h-6 w-6', // 24×24px
+          'h-7 w-7', // 28×28px
           'p-0',
           'rounded-[var(--radius-default)]',
         ],

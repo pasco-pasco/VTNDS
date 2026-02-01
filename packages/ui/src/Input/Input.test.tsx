@@ -141,19 +141,19 @@ describe('Input', () => {
   it('renders small size correctly', () => {
     render(<Input size="sm" />);
     const input = screen.getByRole('textbox');
-    expect(input).toHaveClass('h-6');
+    expect(input).toHaveClass('h-6'); // 24px
   });
 
   it('renders medium size correctly (default)', () => {
     render(<Input />);
     const input = screen.getByRole('textbox');
-    expect(input).toHaveClass('h-8');
+    expect(input).toHaveClass('h-7'); // 28px
   });
 
   it('renders large size correctly', () => {
     render(<Input size="lg" />);
     const input = screen.getByRole('textbox');
-    expect(input).toHaveClass('h-10');
+    expect(input).toHaveClass('h-8'); // 32px
   });
 
   // ========================================

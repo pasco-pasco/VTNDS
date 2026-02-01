@@ -34,7 +34,6 @@ const checkboxVariants = cva(
     'disabled:opacity-50',
     // Cursor
     'cursor-pointer',
-    'disabled:cursor-not-allowed',
   ],
   {
     variants: {

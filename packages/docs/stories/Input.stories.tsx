@@ -231,7 +231,7 @@ export const Small: Story = {
 };
 
 /**
- * Medium size input (32px height) - default
+ * Medium size input (28px height) - default
  */
 export const Medium: Story = {
   args: {
@@ -242,7 +242,7 @@ export const Medium: Story = {
 };
 
 /**
- * Large size input (40px height)
+ * Large size input (32px height)
  */
 export const Large: Story = {
   args: {
@@ -263,8 +263,8 @@ export const AllSizes: Story = {
   render: () => (
     <div className="flex flex-col gap-4">
       <Input size="sm" label="Small" placeholder="24px height" />
-      <Input size="md" label="Medium (default)" placeholder="32px height" />
-      <Input size="lg" label="Large" placeholder="40px height" />
+      <Input size="md" label="Medium (default)" placeholder="28px height" />
+      <Input size="lg" label="Large" placeholder="32px height" />
     </div>
   ),
 };

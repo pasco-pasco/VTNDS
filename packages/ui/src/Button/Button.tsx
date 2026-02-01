@@ -32,7 +32,7 @@ const buttonVariants = cva(
     // Disabled state (50% opacity, not clickable)
     'disabled:pointer-events-none disabled:opacity-50',
     // Remove default button styles
-    'border-0 cursor-pointer',
+    'border border-transparent cursor-pointer',
   ],
   {
     /* ========================================
@@ -120,7 +120,7 @@ const buttonVariants = cva(
         /* MEDIUM - 28px height, default */
         md: [
           'h-7', // 28px height
-          'px-3', // 12px horizontal padding
+          'px-2.5', // 10px horizontal padding
           'text-xs', // 12px font
           'rounded-[var(--radius-default)]',
           'gap-1.5', // 6px gap
@@ -129,7 +129,7 @@ const buttonVariants = cva(
         /* LARGE - 32px height, prominent actions */
         lg: [
           'h-8', // 32px height
-          'px-4', // 16px horizontal padding
+          'px-3', // 12px horizontal padding
           'text-sm', // 14px font
           'rounded-[var(--radius-default)]',
           'gap-2', // 8px gap

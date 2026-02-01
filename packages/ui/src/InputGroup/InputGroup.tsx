@@ -53,7 +53,7 @@ const inputGroupAddonVariants = cva(
           'left-0',
           'top-0',
           'bottom-0',
-          'pl-3',
+          'pl-2.5', // 10px - matches md input padding
           'z-10',
         ],
         'inline-end': [
@@ -61,18 +61,12 @@ const inputGroupAddonVariants = cva(
           'right-0',
           'top-0',
           'bottom-0',
-          'pr-3',
+          'pr-2.5', // 10px - matches md input padding
           'z-10',
         ],
         // Block alignments (above/below input)
-        'block-start': [
-          'w-full',
-          'pb-2',
-        ],
-        'block-end': [
-          'w-full',
-          'pt-2',
-        ],
+        'block-start': ['w-full', 'pb-2'],
+        'block-end': ['w-full', 'pt-2'],
       },
     },
     defaultVariants: {
@@ -165,19 +159,9 @@ const inputGroupButtonVariants = cva(
           'gap-1',
         ],
         // Icon-only extra small
-        'icon-xs': [
-          'h-5',
-          'w-5',
-          'p-0',
-          'rounded-[var(--radius-sm)]',
-        ],
+        'icon-xs': ['h-5', 'w-5', 'p-0', 'rounded-[var(--radius-sm)]'],
         // Icon-only small
-        'icon-sm': [
-          'h-6',
-          'w-6',
-          'p-0',
-          'rounded-[var(--radius-default)]',
-        ],
+        'icon-sm': ['h-6', 'w-6', 'p-0', 'rounded-[var(--radius-default)]'],
       },
     },
     defaultVariants: {
@@ -203,10 +187,10 @@ const inputGroupInputVariants = cva([
   'placeholder:text-[var(--color-muted-foreground)]',
   'transition-colors',
   'duration-150',
-  'h-8', // 32px default
-  'px-3',
+  'h-7', // 28px default (md)
+  'px-2.5', // 10px horizontal padding
   'py-1.5',
-  'text-sm',
+  'text-xs', // 12px font
   'rounded-[var(--radius-default)]',
   'shadow-sm',
   // Focus styles - work with parent focus-within
@@ -260,7 +244,7 @@ const inputGroupTextareaVariants = cva([
  * Text content for addons (like "$", "USD", etc.)
  */
 const inputGroupTextVariants = cva([
-  'text-sm',
+  'text-xs', // 12px - matches md input font size
   'text-[var(--color-muted-foreground)]',
   'whitespace-nowrap',
   'select-none',
@@ -346,11 +330,7 @@ InputGroup.displayName = 'InputGroup';
 export const InputGroupAddon = forwardRef<HTMLDivElement, InputGroupAddonProps>(
   ({ align = 'inline-start', className, children, ...props }, ref) => {
     return (
-      <div
-        ref={ref}
-        className={cn(inputGroupAddonVariants({ align }), className)}
-        {...props}
-      >
+      <div ref={ref} className={cn(inputGroupAddonVariants({ align }), className)} {...props}>
         {children}
       </div>
     );

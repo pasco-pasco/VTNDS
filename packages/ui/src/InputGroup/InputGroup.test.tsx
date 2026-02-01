@@ -140,9 +140,7 @@ describe('InputGroup', () => {
     });
 
     it('applies default variant', () => {
-      const { container } = render(
-        <InputGroupButton variant="default">Button</InputGroupButton>
-      );
+      const { container } = render(<InputGroupButton variant="default">Button</InputGroupButton>);
       expect(container.firstChild).toHaveClass('bg-[var(--color-primary-default)]');
     });
 

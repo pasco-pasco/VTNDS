@@ -155,24 +155,24 @@ export const SizeSmall: Story = {
 };
 
 /**
- * Medium Size (32px) - Default
+ * Medium Size (28px) - Default
  * Standard size for most use cases
  */
 export const SizeMedium: Story = {
   args: {
     size: 'md',
-    children: 'Medium (32px)',
+    children: 'Medium (28px)',
   },
 };
 
 /**
- * Large Size (40px)
+ * Large Size (32px)
  * Use for touch targets, prominent CTAs
  */
 export const SizeLarge: Story = {
   args: {
     size: 'lg',
-    children: 'Large (40px)',
+    children: 'Large (32px)',
   },
 };
 

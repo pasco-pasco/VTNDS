@@ -33,21 +33,21 @@ const inputVariants = cva(
       size: {
         sm: [
           'h-6', // 24px
-          'px-3',
+          'px-2',
           'py-1',
           'text-xs',
           'rounded-[var(--radius-default)]',
         ],
         md: [
-          'h-8', // 32px
-          'px-3',
+          'h-7', // 28px
+          'px-2.5',
           'py-1.5',
-          'text-sm',
+          'text-xs',
           'rounded-[var(--radius-default)]',
         ],
         lg: [
-          'h-10', // 40px
-          'px-4',
+          'h-8', // 32px
+          'px-3',
           'py-2',
           'text-sm',
           'rounded-[var(--radius-default)]',

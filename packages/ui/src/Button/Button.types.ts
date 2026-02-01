@@ -18,16 +18,16 @@ export type ButtonVariant =
  * Button Sizes
  *
  * Maps to Figma's "Size" property.
- * Heights: sm=24px, md=32px, lg=40px
+ * Heights: sm=24px, md=28px, lg=32px
  * Icon sizes are square buttons for icon-only use.
  */
 export type ButtonSize =
   | 'sm' // 24px height - Dense UI, toolbars
-  | 'md' // 32px height - Default
-  | 'lg' // 40px height - Touch targets, prominent CTAs
+  | 'md' // 28px height - Default
+  | 'lg' // 32px height - Touch targets, prominent CTAs
   | 'icon-sm' // 24×24px - Icon-only compact
-  | 'icon-md' // 32×32px - Icon-only default
-  | 'icon-lg'; // 40×40px - Icon-only large
+  | 'icon-md' // 28×28px - Icon-only default
+  | 'icon-lg'; // 32×32px - Icon-only large
 
 /**
  * Button Props

@@ -1,4 +1,4 @@
-import { forwardRef, useEffect, useRef, useId } from 'react';
+import { forwardRef, useEffect, useRef, useId, useCallback } from 'react';
 import { cva } from 'class-variance-authority';
 import { cn } from '../utils/cn';
 import type { CheckboxProps } from './Checkbox.types';
@@ -194,15 +194,25 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
     // Internal ref for handling indeterminate state
     const internalRef = useRef<HTMLInputElement>(null);
 
-    // Combine refs
-    const inputRef = (ref as React.RefObject<HTMLInputElement>) || internalRef;
+    // Merge forwarded ref and internal ref so both work
+    const mergeRefs = useCallback(
+      (node: HTMLInputElement | null) => {
+        internalRef.current = node;
+        if (typeof ref === 'function') {
+          ref(node);
+        } else if (ref) {
+          (ref as React.MutableRefObject<HTMLInputElement | null>).current = node;
+        }
+      },
+      [ref]
+    );
 
     // Handle indeterminate state (can only be set via JS, not HTML attribute)
     useEffect(() => {
-      if (inputRef.current) {
-        inputRef.current.indeterminate = indeterminate;
+      if (internalRef.current) {
+        internalRef.current.indeterminate = indeterminate;
       }
-    }, [indeterminate, inputRef]);
+    }, [indeterminate]);
 
     // Generate unique ID using React's useId hook (stable across renders)
     const generatedId = useId();
@@ -214,11 +224,12 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
         {/* Checkbox input wrapper (for positioning the icon) */}
         <div className="relative flex items-center justify-center">
           <input
-            ref={inputRef}
+            ref={mergeRefs}
             type="checkbox"
             id={inputId}
             disabled={disabled}
             aria-describedby={descriptionId}
+            aria-invalid={error || undefined}
             className={cn(checkboxVariants({ size, error }), className)}
             {...props}
           />

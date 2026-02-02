@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { Checkbox } from './Checkbox';
@@ -161,5 +162,43 @@ describe('Checkbox', () => {
   it('applies wrapperClassName to wrapper element', () => {
     const { container } = render(<Checkbox wrapperClassName="wrapper-class" />);
     expect(container.firstChild).toHaveClass('wrapper-class');
+  });
+
+  // ========================================
+  // ARIA-INVALID
+  // ========================================
+
+  it('sets aria-invalid when error is true', () => {
+    render(<Checkbox error label="Error" />);
+    expect(screen.getByRole('checkbox')).toHaveAttribute('aria-invalid', 'true');
+  });
+
+  it('omits aria-invalid when error is false', () => {
+    render(<Checkbox label="No error" />);
+    expect(screen.getByRole('checkbox')).not.toHaveAttribute('aria-invalid');
+  });
+
+  // ========================================
+  // REF FORWARDING
+  // ========================================
+
+  it('forwards ref to the checkbox element', () => {
+    const ref = React.createRef<HTMLInputElement>();
+    render(<Checkbox ref={ref} label="With ref" />);
+    expect(ref.current).toBeInstanceOf(HTMLInputElement);
+  });
+
+  it('works with callback refs', () => {
+    const callbackRef = vi.fn();
+    render(<Checkbox ref={callbackRef} label="Callback ref" />);
+    expect(callbackRef).toHaveBeenCalledTimes(1);
+    expect(callbackRef).toHaveBeenCalledWith(expect.any(HTMLInputElement));
+  });
+
+  it('supports indeterminate state with forwarded ref', () => {
+    const ref = React.createRef<HTMLInputElement>();
+    render(<Checkbox ref={ref} label="Both" indeterminate />);
+    expect(ref.current).toBeInstanceOf(HTMLInputElement);
+    expect(ref.current!.indeterminate).toBe(true);
   });
 });

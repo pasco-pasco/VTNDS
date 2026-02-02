@@ -119,9 +119,9 @@
      Figma: height/*
      Used for buttons, inputs, etc.
      ---------------------------------------- */
-  --height-6: 24px; /* Small - Dense/compact UI */
-  --height-7: 28px; /* TreeView rows */
-  --height-8: 32px; /* Medium - Default */
+  --height-6: 24px; /* Small (sm) - Dense/compact UI */
+  --height-7: 28px; /* Medium (md) - Default */
+  --height-8: 32px; /* Large (lg) - Touch targets */
   --height-9: 36px; /* Intermediate */
   --height-10: 40px; /* Large - Touch targets */
 

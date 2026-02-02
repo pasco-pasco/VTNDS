@@ -32,7 +32,7 @@ const buttonVariants = cva(
     // Disabled state (50% opacity, not clickable)
     'disabled:pointer-events-none disabled:opacity-50',
     // Remove default button styles
-    'border-0 cursor-pointer',
+    'border border-transparent cursor-pointer',
   ],
   {
     /* ========================================
@@ -105,49 +105,49 @@ const buttonVariants = cva(
       /**
        * Size variant
        * Controls height, padding, font size, and border radius
-       * Heights: sm=28px, md=32px, lg=40px (matching Figma specs)
+       * Heights: sm=24px, md=28px, lg=32px (matching Figma specs)
        */
       size: {
-        /* SMALL - 28px height, compact UI */
+        /* SMALL - 24px height, compact UI */
         sm: [
-          'h-7', // 28px height
+          'h-6', // 24px height
           'px-2', // 8px horizontal padding
           'text-xs', // 12px font
           'rounded-[var(--radius-default)]',
           'gap-1', // 4px gap between icon and text
         ],
 
-        /* MEDIUM - 32px height, default */
+        /* MEDIUM - 28px height, default */
         md: [
-          'h-8', // 32px height
+          'h-7', // 28px height
           'px-2.5', // 10px horizontal padding
-          'text-sm', // 14px font
+          'text-xs', // 12px font
           'rounded-[var(--radius-default)]',
           'gap-1.5', // 6px gap
         ],
 
-        /* LARGE - 40px height, touch targets */
+        /* LARGE - 32px height, prominent actions */
         lg: [
-          'h-10', // 40px height
+          'h-8', // 32px height
           'px-3', // 12px horizontal padding
-          'text-sm', // 14px font (same as md)
+          'text-sm', // 14px font
           'rounded-[var(--radius-default)]',
           'gap-2', // 8px gap
         ],
 
         /* ICON-ONLY SIZES - Square buttons for icons */
         'icon-sm': [
-          'h-7 w-7', // 28×28px
+          'h-6 w-6', // 24×24px
           'p-0',
           'rounded-[var(--radius-default)]',
         ],
         'icon-md': [
-          'h-8 w-8', // 32×32px
+          'h-7 w-7', // 28×28px
           'p-0',
           'rounded-[var(--radius-default)]',
         ],
         'icon-lg': [
-          'h-10 w-10', // 40×40px
+          'h-8 w-8', // 32×32px
           'p-0',
           'rounded-[var(--radius-default)]',
         ],

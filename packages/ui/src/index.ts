@@ -25,6 +25,29 @@ export type { CheckboxProps } from './Checkbox';
 export { Input, inputVariants } from './Input';
 export type { InputProps } from './Input';
 
+export {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton,
+  InputGroupInput,
+  InputGroupTextarea,
+  InputGroupText,
+  inputGroupVariants,
+  inputGroupAddonVariants,
+  inputGroupButtonVariants,
+  inputGroupInputVariants,
+  inputGroupTextareaVariants,
+  inputGroupTextVariants,
+} from './InputGroup';
+export type {
+  InputGroupProps,
+  InputGroupAddonProps,
+  InputGroupButtonProps,
+  InputGroupInputProps,
+  InputGroupTextareaProps,
+  InputGroupTextProps,
+} from './InputGroup';
+
 // Future components will be exported here:
 // export { Switch } from "./Switch";
 // export { Select } from "./Select";

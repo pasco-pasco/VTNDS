@@ -96,9 +96,7 @@ export const Welcome: Story = {
         </section>
 
         {/* Resources */}
-        <section className="space-y-4">
-
-        </section>
+        <section className="space-y-4"></section>
       </div>
     </div>
   ),

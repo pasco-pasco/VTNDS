@@ -59,7 +59,7 @@ const inputVariants = cva(
           'border-[var(--color-input)]',
           'file:border-0',
           'file:bg-transparent',
-          'file:text-sm',
+          'file:text-xs', // 12px - matches button text size
           'file:font-medium',
           'file:text-[var(--color-foreground)]',
           'file:mr-3',

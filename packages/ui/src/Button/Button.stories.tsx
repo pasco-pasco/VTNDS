@@ -12,11 +12,6 @@ import {
 import { Button } from './Button';
 
 /**
- * Button Stories for Storybook
- 
- */
-
-/**
  * Meta configuration for the Button stories
  * This sets up how the Button appears in Storybook's sidebar
  */

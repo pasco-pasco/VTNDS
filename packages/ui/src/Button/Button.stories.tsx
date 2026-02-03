@@ -13,11 +13,7 @@ import { Button } from './Button';
 
 /**
  * Button Stories for Storybook
- *
- * 📚 LEARNING MOMENT:
- * Storybook stories are like your Figma component examples.
- * Each "story" shows the component in a specific state.
- * This file creates the interactive preview you see in Storybook.
+ 
  */
 
 /**

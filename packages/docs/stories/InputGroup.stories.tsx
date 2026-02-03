@@ -50,7 +50,14 @@ type Story = StoryObj<typeof InputGroup>;
 
 // Icon components for examples
 const SearchIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="text-[var(--color-muted-foreground)]"
+  >
     <path
       d="M7 12.5C10.0376 12.5 12.5 10.0376 12.5 7C12.5 3.96243 10.0376 1.5 7 1.5C3.96243 1.5 1.5 3.96243 1.5 7C1.5 10.0376 3.96243 12.5 7 12.5Z"
       stroke="currentColor"
@@ -69,7 +76,14 @@ const SearchIcon = () => (
 );
 
 const UserIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="text-[var(--color-muted-foreground)]"
+  >
     <circle cx="8" cy="5" r="3" stroke="currentColor" strokeWidth="1.5" />
     <path
       d="M2 14.5C2 11.5 4.5 9 8 9C11.5 9 14 11.5 14 14.5"
@@ -81,7 +95,14 @@ const UserIcon = () => (
 );
 
 const MailIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="text-[var(--color-muted-foreground)]"
+  >
     <path
       d="M2 3H14C14.55 3 15 3.45 15 4V12C15 12.55 14.55 13 14 13H2C1.45 13 1 12.55 1 12V4C1 3.45 1.45 3 2 3Z"
       stroke="currentColor"

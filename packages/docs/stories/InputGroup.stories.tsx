@@ -125,7 +125,7 @@ export const IconStart: Story = {
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
-        <InputGroupInput placeholder="Search..." />
+        <InputGroupInput placeholder="Search..." className="pl-8" />
         <InputGroupAddon align="inline-start">
           <SearchIcon />
         </InputGroupAddon>
@@ -139,7 +139,7 @@ export const UserInput: Story = {
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
-        <InputGroupInput placeholder="Enter username" />
+        <InputGroupInput placeholder="Enter username" className="pl-8" />
         <InputGroupAddon align="inline-start">
           <UserIcon />
         </InputGroupAddon>
@@ -153,7 +153,7 @@ export const EmailInput: Story = {
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
-        <InputGroupInput type="email" placeholder="your.email" />
+        <InputGroupInput type="email" placeholder="your.email" className="pl-8" />
         <InputGroupAddon align="inline-start">
           <MailIcon />
         </InputGroupAddon>
@@ -171,7 +171,7 @@ export const CurrencyPrefix: Story = {
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
-        <InputGroupInput placeholder="0.00" type="number" />
+        <InputGroupInput placeholder="0.00" type="number" className="pl-7" />
         <InputGroupAddon align="inline-start">
           <InputGroupText>$</InputGroupText>
         </InputGroupAddon>
@@ -199,7 +199,7 @@ export const CurrencyBoth: Story = {
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
-        <InputGroupInput placeholder="0.00" type="number" />
+        <InputGroupInput placeholder="0.00" type="number" className="pl-7 pr-12" />
         <InputGroupAddon align="inline-start">
           <InputGroupText>$</InputGroupText>
         </InputGroupAddon>
@@ -216,7 +216,7 @@ export const URLInput: Story = {
   render: () => (
     <div className="w-[400px]">
       <InputGroup>
-        <InputGroupInput placeholder="yoursite" />
+        <InputGroupInput placeholder="yoursite" className="pl-16 pr-12" />
         <InputGroupAddon align="inline-start">
           <InputGroupText>https://</InputGroupText>
         </InputGroupAddon>
@@ -265,7 +265,7 @@ export const URLWithButton: Story = {
   render: () => (
     <div className="w-[400px]">
       <InputGroup>
-        <InputGroupInput placeholder="Enter URL..." />
+        <InputGroupInput placeholder="Enter URL..." className="pl-16" />
         <InputGroupAddon align="inline-start">
           <InputGroupText>https://</InputGroupText>
         </InputGroupAddon>
@@ -384,7 +384,7 @@ export const CompleteExample: Story = {
       <div>
         <label className="block text-sm font-medium mb-2">Product Search</label>
         <InputGroup>
-          <InputGroupInput placeholder="Search products..." />
+          <InputGroupInput placeholder="Search products..." className="pl-8" />
           <InputGroupAddon align="inline-start">
             <SearchIcon />
           </InputGroupAddon>
@@ -398,7 +398,7 @@ export const CompleteExample: Story = {
       <div>
         <label className="block text-sm font-medium mb-2">Price</label>
         <InputGroup>
-          <InputGroupInput placeholder="0.00" type="number" />
+          <InputGroupInput placeholder="0.00" type="number" className="pl-7" />
           <InputGroupAddon align="inline-start">
             <InputGroupText>$</InputGroupText>
           </InputGroupAddon>
@@ -412,7 +412,7 @@ export const CompleteExample: Story = {
       <div>
         <label className="block text-sm font-medium mb-2">Company Email</label>
         <InputGroup>
-          <InputGroupInput placeholder="username" />
+          <InputGroupInput placeholder="username" className="pl-8" />
           <InputGroupAddon align="inline-start">
             <UserIcon />
           </InputGroupAddon>
@@ -469,14 +469,14 @@ export const WithValues: Story = {
   render: () => (
     <div className="w-[400px] space-y-4">
       <InputGroup>
-        <InputGroupInput value="search query" readOnly />
+        <InputGroupInput value="search query" readOnly className="pl-8" />
         <InputGroupAddon align="inline-start">
           <SearchIcon />
         </InputGroupAddon>
       </InputGroup>
 
       <InputGroup>
-        <InputGroupInput value="99.99" readOnly />
+        <InputGroupInput value="99.99" readOnly className="pl-7 pr-12" />
         <InputGroupAddon align="inline-start">
           <InputGroupText>$</InputGroupText>
         </InputGroupAddon>

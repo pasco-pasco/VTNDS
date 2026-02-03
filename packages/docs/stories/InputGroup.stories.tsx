@@ -107,7 +107,7 @@ const MailIcon = () => (
  */
 
 export const Default: Story = {
-  name: '🔍 Search with Icon (End)',
+  name: 'Search with Icon (End)',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -121,7 +121,7 @@ export const Default: Story = {
 };
 
 export const IconStart: Story = {
-  name: '🔍 Search with Icon (Start)',
+  name: 'Search with Icon (Start)',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -135,7 +135,7 @@ export const IconStart: Story = {
 };
 
 export const UserInput: Story = {
-  name: '👤 Username Input',
+  name: 'Username Input',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -149,7 +149,7 @@ export const UserInput: Story = {
 };
 
 export const EmailInput: Story = {
-  name: '✉️ Email Input',
+  name: 'Email Input',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -167,7 +167,7 @@ export const EmailInput: Story = {
  */
 
 export const CurrencyPrefix: Story = {
-  name: '💵 Currency Prefix ($)',
+  name: 'Currency Prefix ($)',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -181,7 +181,7 @@ export const CurrencyPrefix: Story = {
 };
 
 export const CurrencySuffix: Story = {
-  name: '💵 Currency Suffix (USD)',
+  name: 'Currency Suffix (USD)',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -195,7 +195,7 @@ export const CurrencySuffix: Story = {
 };
 
 export const CurrencyBoth: Story = {
-  name: '💵 Currency Both Sides',
+  name: 'Currency Both Sides',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -212,7 +212,7 @@ export const CurrencyBoth: Story = {
 };
 
 export const URLInput: Story = {
-  name: '🌐 URL Input',
+  name: 'URL Input',
   render: () => (
     <div className="w-[400px]">
       <InputGroup>
@@ -229,7 +229,7 @@ export const URLInput: Story = {
 };
 
 export const EmailDomain: Story = {
-  name: '📧 Email with Domain',
+  name: 'Email with Domain',
   render: () => (
     <div className="w-[400px]">
       <InputGroup>
@@ -247,7 +247,7 @@ export const EmailDomain: Story = {
  */
 
 export const SearchButton: Story = {
-  name: '🔘 Search Button',
+  name: 'Search Button',
   render: () => (
     <div className="w-[400px]">
       <InputGroup>
@@ -261,7 +261,7 @@ export const SearchButton: Story = {
 };
 
 export const URLWithButton: Story = {
-  name: '🔘 URL with Go Button',
+  name: 'URL with Go Button',
   render: () => (
     <div className="w-[400px]">
       <InputGroup>
@@ -278,7 +278,7 @@ export const URLWithButton: Story = {
 };
 
 export const IconButtons: Story = {
-  name: '🔘 Multiple Icon Buttons',
+  name: 'Multiple Icon Buttons',
   render: () => (
     <div className="w-[400px]">
       <InputGroup>
@@ -304,7 +304,7 @@ export const IconButtons: Story = {
  */
 
 export const HeaderAbove: Story = {
-  name: '📋 Header Above Input',
+  name: 'Header Above Input',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -318,7 +318,7 @@ export const HeaderAbove: Story = {
 };
 
 export const FooterBelow: Story = {
-  name: '📋 Footer Below Input',
+  name: 'Footer Below Input',
   render: () => (
     <div className="w-[320px]">
       <InputGroup>
@@ -336,7 +336,7 @@ export const FooterBelow: Story = {
  */
 
 export const TextareaBasic: Story = {
-  name: '📝 Textarea with Character Count',
+  name: 'Textarea with Character Count',
   render: () => (
     <div className="w-[400px]">
       <InputGroup>
@@ -353,7 +353,7 @@ export const TextareaBasic: Story = {
 };
 
 export const TextareaCode: Story = {
-  name: '📝 Code Editor Style',
+  name: 'Code Editor Style',
   render: () => (
     <div className="w-[500px]">
       <InputGroup>
@@ -377,7 +377,7 @@ export const TextareaCode: Story = {
  */
 
 export const CompleteExample: Story = {
-  name: '✨ Complete Examples',
+  name: 'Complete Examples',
   render: () => (
     <div className="w-[500px] space-y-6">
       {/* Search with icon and button */}
@@ -444,7 +444,7 @@ export const CompleteExample: Story = {
  */
 
 export const DisabledState: Story = {
-  name: '🚫 Disabled State',
+  name: 'Disabled State',
   render: () => (
     <div className="w-[320px] space-y-4">
       <InputGroup>
@@ -465,7 +465,7 @@ export const DisabledState: Story = {
 };
 
 export const WithValues: Story = {
-  name: '✏️ With Values',
+  name: 'With Values',
   render: () => (
     <div className="w-[400px] space-y-4">
       <InputGroup>

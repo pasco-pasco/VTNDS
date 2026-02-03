@@ -70,15 +70,12 @@ const SearchIcon = () => (
 
 const UserIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="8" cy="5" r="3" stroke="currentColor" strokeWidth="1.5" />
     <path
-      d="M8 8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0C5.79086 0 4 1.79086 4 4C4 6.20914 5.79086 8 8 8Z"
+      d="M2 14.5C2 11.5 4.5 9 8 9C11.5 9 14 11.5 14 14.5"
       stroke="currentColor"
       strokeWidth="1.5"
-    />
-    <path
-      d="M1 16C1 12.134 4.13401 9 8 9C11.866 9 15 12.134 15 16"
-      stroke="currentColor"
-      strokeWidth="1.5"
+      strokeLinecap="round"
     />
   </svg>
 );

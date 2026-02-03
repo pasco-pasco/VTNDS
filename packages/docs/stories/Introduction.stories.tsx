@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 /**
  * Welcome to VTNDS
  *
- * Industrial design system for CAD and automation software.
+ * An industrial UI library for CAD and automation applications.
  * Built for precision, efficiency, and information density.
  */
 const meta: Meta = {
@@ -92,29 +92,6 @@ export const Welcome: Story = {
               <div className="text-sm text-[--color-muted-foreground]">Large (lg)</div>
               <div className="text-xs text-[--color-muted-foreground]">Touch targets</div>
             </div>
-          </div>
-        </section>
-
-        {/* Resources */}
-        <section className="space-y-4">
-          <h2 className="text-2xl font-semibold text-[--color-foreground]">Resources</h2>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="https://www.figma.com/design/eQToPdfTQBxg8vbMP7P0Mr/VTNDS"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[--color-secondary-default] text-[--color-secondary-foreground] rounded-[--radius-default] hover:bg-[--color-secondary-hover] transition-colors"
-            >
-              Figma Design File
-            </a>
-            <a
-              href="https://github.com/pasco-pasco/VTNDS"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-[--color-secondary-default] text-[--color-secondary-foreground] rounded-[--radius-default] hover:bg-[--color-secondary-hover] transition-colors"
-            >
-              GitHub Repository
-            </a>
           </div>
         </section>
       </div>

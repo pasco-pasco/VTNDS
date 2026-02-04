@@ -72,3 +72,4 @@ jobs:
           workingDir: packages/docs
           onlyChanged: true
           exitOnceUploaded: true
+          autoAcceptChanges: ${{ github.ref == 'refs/heads/main' }}

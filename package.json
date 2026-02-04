@@ -9,6 +9,7 @@
     "build": "pnpm -r build",
     "build:tokens": "pnpm --filter @vtnds/tokens build",
     "storybook": "pnpm --filter @vtnds/docs storybook",
+    "chromatic": "chromatic --exit-zero-on-changes",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",

@@ -13,6 +13,7 @@ const switchTrackVariants = cva(
   [
     'relative',
     'inline-flex',
+    'items-center',
     'shrink-0',
     'cursor-pointer',
     'rounded-full',
@@ -20,16 +21,16 @@ const switchTrackVariants = cva(
     'border-transparent',
     'bg-[var(--color-input)]',
     'transition-colors duration-150',
-    // Focus ring (applied via peer)
-    'peer-focus-visible:outline-none',
-    'peer-focus-visible:ring-2',
-    'peer-focus-visible:ring-[var(--color-ring)]',
-    'peer-focus-visible:ring-offset-2',
-    // Checked state
-    'peer-checked:bg-[var(--color-primary-default)]',
+    // Focus ring (using :has() to detect child input focus)
+    'has-[:focus-visible]:outline-none',
+    'has-[:focus-visible]:ring-2',
+    'has-[:focus-visible]:ring-[var(--color-ring)]',
+    'has-[:focus-visible]:ring-offset-2',
+    // Checked state (using :has() to detect child input checked)
+    'has-[:checked]:bg-[var(--color-primary-default)]',
     // Disabled state
-    'peer-disabled:cursor-not-allowed',
-    'peer-disabled:opacity-50',
+    'has-[:disabled]:cursor-not-allowed',
+    'has-[:disabled]:opacity-50',
   ],
   {
     variants: {
@@ -41,7 +42,7 @@ const switchTrackVariants = cva(
       error: {
         true: [
           'bg-[var(--color-destructive-default)]',
-          'peer-checked:bg-[var(--color-destructive-default)]',
+          'has-[:checked]:bg-[var(--color-destructive-default)]',
         ],
         false: [],
       },
@@ -178,21 +179,21 @@ export const Switch = forwardRef<HTMLInputElement, SwitchProps>(
 
     return (
       <div className={cn('flex items-start gap-2', wrapperClassName)}>
-        {/* Hidden checkbox input for accessibility */}
-        <input
-          ref={ref}
-          type="checkbox"
-          role="switch"
-          id={inputId}
-          disabled={disabled}
-          aria-describedby={descriptionId}
-          aria-invalid={error || undefined}
-          className="peer sr-only"
-          {...props}
-        />
-
-        {/* Visual switch track and thumb */}
+        {/* Switch track container - wraps input and visual elements */}
         <label htmlFor={inputId} className={cn(switchTrackVariants({ size, error }), className)}>
+          {/* Hidden checkbox input for accessibility */}
+          <input
+            ref={ref}
+            type="checkbox"
+            role="switch"
+            id={inputId}
+            disabled={disabled}
+            aria-describedby={descriptionId}
+            aria-invalid={error || undefined}
+            className="peer sr-only"
+            {...props}
+          />
+          {/* Visual thumb - now sibling of input so peer-checked works */}
           <span className={switchThumbVariants({ size })} />
         </label>
 
